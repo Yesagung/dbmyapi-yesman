@@ -19,7 +19,7 @@ class BookController extends Controller
 {
     /**
      * @OA\Get(
-     *      path="/api/books",
+     *      path="/api/book",
      *      tags={"book"},
      *      summary="Display a listing of items",
      *      operationId="index",
@@ -37,7 +37,7 @@ class BookController extends Controller
 
     /**
      * @OA\Post(
-     *      path="/api/books",
+     *      path="/api/book",
      *      tags={"book"},
      *      summary="Store a newly created item",
      *      operationId="store",
@@ -66,7 +66,8 @@ class BookController extends Controller
      *                  "price": 85000
      *              }
      *          )
-     *      )
+     *      ), 
+     *      security={{"passport_token_ready":{},"passport":{}}}
      * )
      */
     public function store(Request $request)
@@ -178,7 +179,8 @@ class BookController extends Controller
      *                  "price": 85000
      *              }
      *          )
-     *      )
+     *      ),
+     *      security={{"passport_token_ready":{},"passport":{}}}
      * )
      */
     public function update(Request $request, $id)
@@ -236,7 +238,8 @@ class BookController extends Controller
      *              type="integer",
      *              format="int64"
      *          )
-     *      )
+     *      ),
+     *      security={{"passport_token_ready":{},"passport":{}}}
      * )
      */
     public function destroy($id)
