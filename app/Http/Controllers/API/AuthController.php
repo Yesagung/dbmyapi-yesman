@@ -13,7 +13,7 @@ use OpenApi\Annotations as OA;
 /** 
  * Class AuthController.
  * 
- * @author Yesman <yesnab.422023030@civitas.ukrida.ac.id>
+ * @author Yesman <yesman.422023030@civitas.ukrida.ac.id>
  */
 class AuthController extends Controller
 {
